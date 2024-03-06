@@ -95,13 +95,13 @@ Public Class Session
         Dim smtpServer As New SmtpClient
         Dim email As New MailMessage()
         smtpServer.UseDefaultCredentials = False
-        smtpServer.Credentials = New Net.NetworkCredential("muistaadev@gmail.com", "muistaa123")
+        smtpServer.Credentials = New Net.NetworkCredential("EMAIL", "PASSWORD")
         smtpServer.Port = 587
         smtpServer.EnableSsl = True
         smtpServer.Host = "smtp.gmail.com"
 
         email = New MailMessage()
-        email.From = New MailAddress("muistaadev@gmail.com")
+        email.From = New MailAddress("EMAIL")
         email.To.Add(recipient)
         email.Subject = subject
         email.IsBodyHtml = False
